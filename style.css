@@ -1,0 +1,588 @@
+/* =========================================================
+   SIPM ODGJ - LOGIN PAGE
+   Yayasan Cahaya Kasih Amanah
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --green: #22c55e;
+    --green-dark: #16a34a;
+    --text: #172033;
+    --text-light: #667085;
+    --border: #e5e7eb;
+    --background: #f8fafc;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+/* =========================================================
+   LEFT SECTION
+   ========================================================= */
+
+.login-left {
+    width: 48%;
+    min-height: 100vh;
+
+    padding: 30px 25px 30px 35px;
+
+    background: linear-gradient(
+        145deg,
+        #eff6ff 0%,
+        #f0fdf4 100%
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* ILUSTRASI */
+
+.illustration-wrapper {
+    width: 100%;
+    max-width: 500px;
+    height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border-radius: 18px;
+
+    background: #ffffff;
+    box-shadow: 0 12px 35px rgba(37, 99, 235, 0.08);
+}
+
+.login-illustration {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================================
+   INFORMATION CARD
+   ========================================================= */
+
+.information-card {
+    width: 100%;
+    max-width: 500px;
+
+    margin-top: 18px;
+    padding: 22px 24px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(37, 99, 235, 0.08);
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.information-card h2 {
+    color: var(--primary);
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.information-card p {
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.65;
+    margin-bottom: 15px;
+}
+
+.security-badge {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--green-dark);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.security-badge i {
+    font-size: 15px;
+}
+
+/* =========================================================
+   RIGHT SECTION
+   ========================================================= */
+
+.login-right {
+    width: 52%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 30px 35px 30px 20px;
+
+    background: #f8fafc;
+}
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+
+    padding: 30px 34px;
+
+    background: var(--white);
+
+    border: 1px solid #edf0f5;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(15, 23, 42, 0.07);
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-wrapper {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 13px;
+}
+
+.logo-ycka {
+    width: 82px;
+    height: 82px;
+
+    object-fit: contain;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.login-title {
+    text-align: center;
+    margin-bottom: 27px;
+}
+
+.login-title h1 {
+    color: var(--text);
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    font-weight: 700;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #344054;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.password-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.password-label label {
+    margin-bottom: 7px;
+}
+
+.password-label a {
+    color: var(--primary);
+
+    font-size: 10px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    margin-bottom: 7px;
+}
+
+.password-label a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper > i {
+    position: absolute;
+
+    left: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #98a2b3;
+
+    font-size: 14px;
+
+    z-index: 2;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 43px;
+
+    padding: 0 40px 0 38px;
+
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.input-wrapper input::placeholder {
+    color: #a0a7b2;
+}
+
+.input-wrapper input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+/* =========================================================
+   PASSWORD TOGGLE
+   ========================================================= */
+
+.toggle-password {
+    position: absolute;
+
+    right: 11px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    color: #98a2b3;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    padding: 3px;
+}
+
+.toggle-password:hover {
+    color: var(--primary);
+}
+
+/* =========================================================
+   REMEMBER ME
+   ========================================================= */
+
+.remember-me {
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+.remember-me label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #667085;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+.remember-me input {
+    width: 13px;
+    height: 13px;
+
+    accent-color: var(--primary);
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.login-button {
+    width: 100%;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.login-button:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, 0.2);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.login-button i {
+    font-size: 13px;
+}
+
+/* =========================================================
+   SECURITY INFO
+   ========================================================= */
+
+.security-info {
+    margin-top: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    color: #98a2b3;
+
+    font-size: 8px;
+    font-weight: 500;
+
+    letter-spacing: 0.2px;
+}
+
+.security-info i {
+    font-size: 10px;
+}
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.copyright {
+    margin-top: 11px;
+
+    text-align: center;
+
+    color: #b0b7c3;
+
+    font-size: 7px;
+
+    line-height: 1.6;
+}
+
+/* =========================================================
+   HELP TEXT
+   ========================================================= */
+
+.help-text {
+    margin-top: 16px;
+
+    color: #98a2b3;
+
+    font-size: 9px;
+
+    text-align: center;
+}
+
+.help-text a {
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.help-text a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .login-left {
+        padding: 30px;
+    }
+
+    .login-right {
+        padding: 30px;
+    }
+
+    .illustration-wrapper {
+        height: 360px;
+    }
+
+    .login-card {
+        padding: 30px;
+    }
+
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .login-page {
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    .login-left {
+        width: 100%;
+        min-height: auto;
+
+        padding: 30px 20px;
+    }
+
+    .login-right {
+        width: 100%;
+        min-height: auto;
+
+        padding: 30px 20px;
+    }
+
+    .illustration-wrapper {
+        height: 320px;
+    }
+
+    .information-card {
+        margin-top: 15px;
+    }
+
+    .login-card {
+        max-width: 500px;
+    }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .login-left {
+        padding: 20px 15px;
+    }
+
+    .login-right {
+        padding: 20px 15px;
+    }
+
+    .illustration-wrapper {
+        height: 270px;
+    }
+
+    .information-card {
+        padding: 20px;
+    }
+
+    .information-card h2 {
+        font-size: 19px;
+    }
+
+    .login-card {
+        padding: 28px 22px;
+    }
+
+    .logo-ycka {
+        width: 75px;
+        height: 75px;
+    }
+
+    .login-title h1 {
+        font-size: 15px;
+    }
+
+}
